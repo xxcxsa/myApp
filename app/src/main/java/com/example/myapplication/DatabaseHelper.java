@@ -13,6 +13,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String COL_2 = "USERNAME";
     private static final String COL_3 = "PASSWORD";
     private static final String COL_4 = "MONEY";
+    static final String TABLE = "Users";
 
     public DatabaseHelper(Context context){
         super(context, DATABASE_NAME, null, 1);
@@ -29,13 +30,18 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             db.execSQL("DROP TABLE IF EXISTS Users");
             onCreate(db);
     }
-    public boolean insertData(String username, String password){
+    public boolean insertData(String username, String password) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(COL_2, username );
         contentValues.put(COL_3, password );
         long result = db.insert("Users", null, contentValues);
         return result != -1;
+    }
+
+    public void addMoney (String money){
+
+        SQLiteDatabase db = this.getWritableDatabase();
     }
 
     public String checkLogin(String username, String password){

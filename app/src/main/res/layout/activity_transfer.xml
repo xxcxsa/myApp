@@ -7,4 +7,37 @@
     android:layout_height="match_parent"
     tools:context=".transferActivity">
 
+    <EditText
+        android:id="@+id/name_edittext"
+        android:layout_width="230dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="324dp"
+        android:layout_marginEnd="88dp"
+        android:ems="10"
+        android:hint="Кому перевести"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/values_edittext"
+        android:layout_width="226dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="92dp"
+        android:ems="10"
+        android:hint="Сколько хотите перевести?"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_edittext" />
+
+    <Button
+        android:id="@+id/transfer_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="144dp"
+        android:text="Перевести"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/values_edittext" />
 </androidx.constraintlayout.widget.ConstraintLayout>

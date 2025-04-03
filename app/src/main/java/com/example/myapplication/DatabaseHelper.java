@@ -12,6 +12,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String COL_1 = "ID";
     private static final String COL_2 = "USERNAME";
     private static final String COL_3 = "PASSWORD";
+    private static final String COL_4 = "MONEY";
 
     public DatabaseHelper(Context context){
         super(context, DATABASE_NAME, null, 1);
@@ -20,7 +21,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-            db.execSQL("CREATE TABLE Users(ID INTEGER PRIMARY KEY AUTOINCREMENT, USERNAME TEXT, PASSWORD TEXT)");
+            db.execSQL("CREATE TABLE Users(ID INTEGER PRIMARY KEY AUTOINCREMENT, USERNAME TEXT, PASSWORD TEXT, MONEY REAL)");
     }
 
     @Override
@@ -36,6 +37,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         long result = db.insert("Users", null, contentValues);
         return result != -1;
     }
+
     public String checkLogin(String username, String password){
         SQLiteDatabase db = this.getWritableDatabase();
         String[] colums ={COL_2};
@@ -50,4 +52,5 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
         return result;
     }
+
 }

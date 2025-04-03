@@ -1,57 +1,69 @@
 package com.example.myapplication;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class HomeActivity extends AppCompatActivity {
-    TextView userName;
+    TextView welcome;
     DatabaseHelper databaseHelper;
-    Button logOut;
+    ImageView logOut;
+    ImageView user_icon, news;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_home);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
 
-        userName = findViewById(R.id.textUserName);
+        welcome = findViewById(R.id.welcome);
+        user_icon = findViewById(R.id.user_icon);
+        news = findViewById(R.id.news);
+        logOut = findViewById(R.id.logOut);
         databaseHelper = new DatabaseHelper(this);
-        logOut = findViewById(R.id.logOutButton);
         String user = getIntent().getStringExtra("USERNAME");
+        String money = getIntent().getStringExtra("MONEY");
 
-        userName.setText("Welcome" + user);
+        welcome.setText("Добро Пожаловать, " + user);
 
         logOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                logOut();
+                LogOut();
             }
         });
-    }
 
-    @Override
-    public void onBackPressed(){
-        logOut();
-        super.onBackPressed();
-    }
+        news.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                News();
+            }
+        });
 
-    private void logOut(){
+
+
+
+
+
+
+    }
+    public void LogOut(){
         Intent intent = new Intent(HomeActivity.this, MainActivity.class);
         startActivity(intent);
         finish();
     }
+
+    public void News(){
+        Intent intent = new Intent(HomeActivity.this, newsActivity.class);
+        startActivity(intent);
+
+    }
+
 }

@@ -1,32 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeActivity"
-    android:background="@color/white"
-    android:padding="10dp">
+    android:layout_gravity="center">
+
 
     <TextView
-        android:id="@+id/textUserName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="24sp"
-        android:layout_centerInParent="true"
-        android:textColor="@color/black"
-        android:layout_marginTop="10dp"/>
+        android:id="@+id/welcome"
+        android:layout_width="204dp"
+        android:layout_height="139dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="176dp"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/logOutButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/textUserName"
-        android:backgroundTint="@color/white"
-        android:text="LogOut"
-        android:textColor="@color/black"
-        android:textSize="24sp"/>
+    <ImageView
+            android:id="@+id/logOut"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="320dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/log_out" />
 
-</RelativeLayout>
+        <ImageView
+            android:id="@+id/user_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginBottom="21dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/user" />
+
+        <ImageView
+            android:id="@+id/news"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/user_icon"
+            app:srcCompat="@drawable/news" />
+
+        <ImageView
+            android:id="@+id/valutes"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/news"
+            app:srcCompat="@drawable/valutes" />
+
+        <ImageView
+            android:id="@+id/transfer"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="21dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/valutes"
+            app:srcCompat="@drawable/transfer" />
+
+        <ImageView
+            android:id="@+id/akcii"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="21dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/transfer"
+            app:srcCompat="@drawable/action" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

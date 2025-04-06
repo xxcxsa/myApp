@@ -40,7 +40,7 @@ public class AksciiActivity extends AppCompatActivity {
         doge_coin = findViewById(R.id.doge_coin);
         eth_coin = findViewById(R.id.eth_coin);
         tether_coin = findViewById(R.id.tether_coin);
-        lite_coin = findViewById(R.id.tether_coin);
+        lite_coin = findViewById(R.id.lite_coin);
         tron_coin = findViewById(R.id.tron_coin);
         text_doge_coin = findViewById(R.id.text_doge_coin);
         text_eth_coin = findViewById(R.id.text_eth_coin);

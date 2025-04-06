@@ -15,6 +15,21 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
+            android:name=".tronActivity"
+            android:exported="false" />
+        <activity
+            android:name=".liteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".tetherActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ethActivity"
+            android:exported="false" />
+        <activity
+            android:name=".dogeActivity"
+            android:exported="false" />
+        <activity
             android:name=".valutesConvertor"
             android:exported="false" />
         <activity

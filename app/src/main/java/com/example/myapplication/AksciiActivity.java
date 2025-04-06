@@ -104,5 +104,85 @@ public class AksciiActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        doge_coin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AksciiActivity.this, dogeActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        text_doge_coin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AksciiActivity.this, dogeActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        eth_coin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AksciiActivity.this, ethActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        text_eth_coin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AksciiActivity.this, ethActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        tether_coin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AksciiActivity.this, tetherActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        text_teth_coin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AksciiActivity.this, tetherActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        lite_coin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AksciiActivity.this, liteActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        text_lite_coin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AksciiActivity.this, liteActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        tron_coin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AksciiActivity.this, tronActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        text_tron_coin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AksciiActivity.this, tronActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

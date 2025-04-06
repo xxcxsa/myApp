@@ -10,9 +10,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "Login.db";
     private static final String COL_1 = "ID";
-    private static final String COL_2 = "USERNAME";
+     static final String COL_2 = "USERNAME";
     private static final String COL_3 = "PASSWORD";
-    private static final String COL_4 = "MONEY";
+     static final String COLUMN_MONEY = "MONEY";
     static final String TABLE = "Users";
 
     public DatabaseHelper(Context context){
@@ -22,7 +22,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-            db.execSQL("CREATE TABLE Users(ID INTEGER PRIMARY KEY AUTOINCREMENT, USERNAME TEXT, PASSWORD TEXT, MONEY REAL)");
+            db.execSQL("CREATE TABLE Users(ID INTEGER PRIMARY KEY AUTOINCREMENT, USERNAME TEXT, PASSWORD TEXT, MONEY TEXT)");
     }
 
     @Override

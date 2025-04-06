@@ -15,6 +15,18 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
+            android:name=".valutesConvertor"
+            android:exported="false" />
+        <activity
+            android:name=".convertorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".bitcoinActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AksciiActivity"
+            android:exported="false" />
+        <activity
             android:name=".transferActivity"
             android:exported="false" />
         <activity
